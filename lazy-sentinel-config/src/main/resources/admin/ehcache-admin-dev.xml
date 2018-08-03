@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Create by laizhiyuan on 2018.3.27
+-->
+<ehcache name="shirocache" updateCheck="false" maxBytesLocalHeap="10M">
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            maxElementsOnDisk="0"
+            eternal="true"
+            overflowToDisk="true"
+            diskPersistent="false"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="0"
+            diskSpoolBufferSizeMB="50"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LFU"
+    />
+
+    <!-- 登录记录缓存 缓存30 * 60分钟 -->
+    <cache name="sentinel-admin-passwordRetryCache"
+           eternal="false"
+           timeToIdleSeconds="1800000"
+           timeToLiveSeconds="1800000"
+           overflowToDisk="true"
+           memoryStoreEvictionPolicy="LRU"
+           statistics="true">
+    </cache>
+
+    <cache name="sentinel-admin-authorizationCache"
+           eternal="false"
+           timeToIdleSeconds="1800000"
+           timeToLiveSeconds="1800000"
+           overflowToDisk="true"
+           memoryStoreEvictionPolicy="LRU"
+           statistics="true">
+    </cache>
+
+    <cache name="sentinel-admin-authenticationCache"
+           eternal="false"
+           timeToIdleSeconds="1800000"
+           timeToLiveSeconds="1800000"
+           overflowToDisk="true"
+           memoryStoreEvictionPolicy="LRU"
+           statistics="true">
+    </cache>
+
+    <cache name="sentinel-admin-activeSessionCache"
+           eternal="false"
+           timeToIdleSeconds="1800000"
+           timeToLiveSeconds="1800000"
+           overflowToDisk="true"
+           memoryStoreEvictionPolicy="LRU"
+           statistics="true">
+    </cache>
+
+</ehcache>

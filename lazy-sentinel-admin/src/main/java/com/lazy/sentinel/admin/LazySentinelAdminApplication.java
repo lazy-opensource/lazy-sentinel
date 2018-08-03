@@ -16,7 +16,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan(value={"com.lazy"})
 @EntityScan({"com.lazy"})
 @EnableJpaRepositories(
-		value = {"com.lazy.*.repository", "com.lazy.*.dao"},
+		value = {"com.lazy.**.repository", "com.lazy.**.dao"},
 		repositoryFactoryBeanClass = BaseRepositoryFactoryBean.class
 )
 public class LazySentinelAdminApplication {
