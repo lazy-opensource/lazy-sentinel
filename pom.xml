@@ -24,15 +24,13 @@
 		<module>lazy-sentinel-dao</module>
 		<module>lazy-sentinel-api</module>
 		<module>lazy-sentinel-service</module>
-		<module>lazy-sentinel-permission</module>
-		<module>lazy-sentinel-admin</module>
 		<module>lazy-sentinel-rest</module>
 	</modules>
 
 	<properties>
 		<lazy.sentinel.version>1.0.0-SNAPSHOT</lazy.sentinel.version>
 		<oauth2.version>0.31</oauth2.version>
-		<spring-cloud.version>Edgware.SR1</spring-cloud.version>
+		<spring-cloud.version>Finchley.SR1</spring-cloud.version>
 	</properties>
 
 	<dependencies>
@@ -78,11 +76,6 @@
 				<artifactId>lazy-sentinel-service</artifactId>
 				<version>${lazy.sentinel.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>com.lazy.sentinel</groupId>
-				<artifactId>lazy-sentinel-permission</artifactId>
-				<version>${lazy.sentinel.version}</version>
-			</dependency>
 			<!--oauth2 config start-->
 			<dependency>
 				<groupId>org.apache.oltu.oauth2</groupId>
@@ -94,8 +87,7 @@
 				<artifactId>org.apache.oltu.oauth2.resourceserver</artifactId>
 				<version>${oauth2.version}</version>
 			</dependency>
-
-			<!--Spring Cloud-->
+			<!--spring cloud-->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
